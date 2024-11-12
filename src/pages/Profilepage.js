@@ -19,7 +19,7 @@ const Profilepage = () => {
         const fetchUserLists = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:5000/api/users/userlists', {
+                const response = await axios.get('https://mern-anime-tracker-back.vercel.app/api/users/userlists', {
                     headers: { 'x-auth-token': token }
                 });
 
@@ -41,7 +41,7 @@ const Profilepage = () => {
     const deleteAnime = async (listType, animeId) => {
         try {
             const token = localStorage.getItem('token');
-            await axios.delete(`http://localhost:5000/api/users/list/${listType}/${animeId}`, {
+            await axios.delete(`https://mern-anime-tracker-back.vercel.app/api/users/list/${listType}/${animeId}`, {
                 headers: { 'x-auth-token': token }
             });
 

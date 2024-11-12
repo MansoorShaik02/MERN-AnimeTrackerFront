@@ -14,7 +14,7 @@ const UserLists = () => {
         const fetchUserLists = async () => {
             try {
                 const token = localStorage.getItem('token');
-                const response = await axios.get('http://localhost:5000/api/users/userlists', {
+                const response = await axios.get('https://mern-anime-tracker-back.vercel.app/api/users/userlists', {
                     headers: { 'x-auth-token': token }
                 });
                 setWatchlist(response.data.watchlist);

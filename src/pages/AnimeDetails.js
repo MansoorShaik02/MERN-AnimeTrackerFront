@@ -36,7 +36,7 @@ const AnimeDetails = () => {
 
         const fetchComments = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/users/comments/${id}`);
+                const response = await axios.get(`https://mern-anime-tracker-back.vercel.app/api/users/comments/${id}`);
                 setComments(response.data);
             } catch (error) {
                 console.error('Error fetching comments:', error);
@@ -57,7 +57,7 @@ const AnimeDetails = () => {
         try {
             const token = localStorage.getItem('token');
             const response = await axios.post(
-                'http://localhost:5000/api/users/comments',
+                'https://mern-anime-tracker-back.vercel.app/api/users/comments',
                 { animeId: id, text: commentText },
                 {
                     headers: {
@@ -123,7 +123,7 @@ const AnimeDetails = () => {
                 image_url: animeDetails.images.jpg.image_url,
             };
 
-            await axios.post('http://mern-anime-tracker-back.vercel.app/api/users/droplist', animeData, {
+            await axios.post('https://mern-anime-tracker-back.vercel.app/api/users/droplist', animeData, {
                 headers: {
                     'x-auth-token': token,
                 },

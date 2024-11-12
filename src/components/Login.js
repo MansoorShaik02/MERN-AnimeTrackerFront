@@ -13,7 +13,7 @@ const Login = ({ onLogin }) => {
     const handleLogin = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post('http://mern-anime-tracker-back.vercel.app/api/users/login', { email, password });
+            const res = await axios.post('https://mern-anime-tracker-back.vercel.app/api/users/login', { email, password });
             login(res.data.token);
             console.log('logged in');
         } catch (err) {

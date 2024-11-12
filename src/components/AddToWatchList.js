@@ -7,7 +7,7 @@ const Watchlist = () => {
     const fetchWatchlist = async () => {
         const token = localStorage.getItem('token');
         try {
-            const response = await axios.get(`http://localhost:5000/watchlist?token=${token}`);
+            const response = await axios.get(`https://mern-anime-tracker-back.vercel.app/watchlist?token=${token}`);
             setWatchlist(response.data);
         } catch (err) {
             console.error(err);
