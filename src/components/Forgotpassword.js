@@ -9,7 +9,7 @@ const Forgotpassword = () => {
     const handleForgotPassword = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('http://localhost:5000/api/users/forgot-password', { email });
+            const response = await axios.post('https://mern-anime-tracker-back.vercel.app/api/users/forgot-password', { email });
             setMessage(response.data.msg);
         } catch (err) {
             setError(err.response?.data?.msg || 'Server error');

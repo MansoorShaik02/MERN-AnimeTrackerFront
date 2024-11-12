@@ -18,7 +18,7 @@ const Register = () => {
         console.log("Password:", password);
 
         try {
-            const response = await axios.post('http://localhost:5000/api/users/register', {
+            const response = await axios.post('https://mern-anime-tracker-back.vercel.app/api/users/register', {
                 username: name,
                 email,
                 password,

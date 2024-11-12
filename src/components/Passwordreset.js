@@ -13,7 +13,8 @@ const Passwordreset = () => {
     const handleResetPassword = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post(`http://localhost:5000/api/users/reset-password/${token}`, { password });
+            const response = await axios.post(`https://mern-anime-tracker-back.vercel.app
+/api/users/reset-password/${token}`, { password });
             setMessage(response.data.msg);
             navigate('/profile');
         } catch (err) {

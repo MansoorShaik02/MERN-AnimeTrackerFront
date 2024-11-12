@@ -91,7 +91,7 @@ const AnimeDetails = () => {
                 image_url: animeDetails.images.jpg.image_url,
             };
 
-            await axios.post('http://localhost:5000/api/users/watchlist', animeData, {
+            await axios.post('https://mern-anime-tracker-back.vercel.app/api/users/watchlist', animeData, {
                 headers: {
                     'x-auth-token': token,
                 },
@@ -123,7 +123,7 @@ const AnimeDetails = () => {
                 image_url: animeDetails.images.jpg.image_url,
             };
 
-            await axios.post('http://localhost:5000/api/users/droplist', animeData, {
+            await axios.post('http://mern-anime-tracker-back.vercel.app/api/users/droplist', animeData, {
                 headers: {
                     'x-auth-token': token,
                 },
@@ -155,7 +155,7 @@ const AnimeDetails = () => {
                 image_url: animeDetails.images.jpg.image_url,
             };
 
-            await axios.post('http://localhost:5000/api/users/watchedlist', animeData, {
+            await axios.post('https://mern-anime-tracker-back.vercel.app/api/users/watchedlist', animeData, {
                 headers: {
                     'x-auth-token': token,
                 },
