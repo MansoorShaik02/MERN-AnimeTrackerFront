@@ -30,6 +30,9 @@ const Register = () => {
             console.error('Error registering user:', error.response?.data?.msg || error.message);
             setError('Registration failed: ' + (error.response?.data?.msg || 'Server error'));
         }
+        finally {
+            console.log("Registered successully")
+        }
     };
 
     return (
