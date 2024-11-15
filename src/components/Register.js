@@ -26,6 +26,7 @@ const Register = () => {
 
             // Handle the success message here
             setMessage(response.data.msg);
+            console.log("set message: ", response.data.msg)
         } catch (error) {
             console.error('Error registering user:', error.response?.data?.msg || error.message);
             setError('Registration failed: ' + (error.response?.data?.msg || 'Server error'));
