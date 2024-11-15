@@ -15,7 +15,7 @@ const Login = ({ onLogin }) => {
         try {
             const res = await axios.post('https://mern-anime-tracker-back.vercel.app/api/users/login', { email, password });
             login(res.data.token);
-            console.log('logged in');
+            // console.log('logged in');
         } catch (err) {
             setError('Invalid credentials');
         }

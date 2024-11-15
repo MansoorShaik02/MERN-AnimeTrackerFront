@@ -25,10 +25,10 @@ const Homepage = () => {
         const token = localStorage.getItem('token');
 
         if (token) {
-            console.log('JWT token exists:', token);
+            // console.log('JWT token exists:', token);
             setIsAuthenticated(true);
         } else {
-            console.log('No JWT token found in localStorage');
+            // console.log('No JWT token found in localStorage');
         }
 
         const fetchPopularAnime = async () => {
@@ -94,10 +94,10 @@ const Homepage = () => {
             localStorage.removeItem('token');
             setIsAuthenticated(false);
             setLogoutMessage('You have been logged out successfully.');
-            console.log("logged out");
+            // console.log("logged out");
         } else {
             setLogoutMessage('Login first to log out.');
-            console.log('No JWT token found in localStorage');
+            //console.log('No JWT token found in localStorage');
         }
     };
 

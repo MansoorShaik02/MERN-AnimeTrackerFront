@@ -13,9 +13,9 @@ const Register = () => {
         e.preventDefault();
         setMessage('');
         setError('');
-        console.log("Name:", name);
-        console.log("Email:", email);
-        console.log("Password:", password);
+        // console.log("Name:", name);
+        // console.log("Email:", email);
+        // console.log("Password:", password);
 
         try {
             const response = await axios.post('https://mern-anime-tracker-back.vercel.app/api/users/register', {

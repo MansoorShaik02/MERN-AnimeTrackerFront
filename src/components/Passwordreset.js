@@ -8,7 +8,7 @@ const Passwordreset = () => {
     const [error, setError] = useState('');
     const { token } = useParams()
     const navigate = useNavigate();
-    console.log(token)
+    //console.log(token)
 
     const handleResetPassword = async (e) => {
         e.preventDefault();

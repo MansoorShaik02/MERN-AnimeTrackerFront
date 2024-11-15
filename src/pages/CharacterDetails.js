@@ -12,7 +12,7 @@ const CharacterDetails = () => {
             try {
                 const response = await axios.get(`https://api.jikan.moe/v4/characters/${id}`);
                 setCharacter(response.data.data);
-                console.log(response.data.data.about); // Assuming the API response contains a "data" object
+                //console.log(response.data.data.about); // Assuming the API response contains a "data" object
             } catch (error) {
                 console.error('Error fetching character details:', error);
             }
