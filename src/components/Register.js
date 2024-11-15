@@ -72,7 +72,6 @@
 import axios from 'axios';
 import { useState } from 'react';
 import "../styles/Register.css";
-import ClipLoader from 'react-spinners/ClipLoader';
 
 const Register = () => {
     const [name, setName] = useState('');
