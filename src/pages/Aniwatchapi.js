@@ -8,7 +8,7 @@ const Aniwatchapi = () => {
                     "https://aniwatch-api-v1-0.onrender.com/api/server/ep=3662"
                 );
                 const data = await resp.json();
-                //console.log(data); // Log the data to the console
+                console.log(data); // Log the data to the console
             } catch (error) {
                 console.error('Error fetching anime:', error);
             }
