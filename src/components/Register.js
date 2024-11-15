@@ -133,7 +133,7 @@ const Register = () => {
                 required
             />
             <button type="submit" disabled={loading}>
-                {loading ? <ClipLoader color="#36d7b7" size={50} /> : "Register"}
+                {loading ? <span className="spinner"></span> : "Register"}
             </button>
             {message && <p style={{ color: 'green' }}>{message}</p>}
             {error && <p style={{ color: 'red' }}>{error}</p>}
