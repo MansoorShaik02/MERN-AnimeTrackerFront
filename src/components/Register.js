@@ -85,7 +85,7 @@ const Register = () => {
         e.preventDefault();
         setMessage('');
         setError('');
-        setLoading(true); // Start loading
+        // Start loading
         console.log("Name:", name);
         console.log("Email:", email);
         console.log("Password:", password);
@@ -103,7 +103,7 @@ const Register = () => {
             console.error('Error registering user:', error.response?.data?.msg || error.message);
             setError('Registration failed: ' + (error.response?.data?.msg || 'Server error'));
         } finally {
-            setLoading(false); // Stop loading
+            // Stop loading
             console.log("Registered successfully");
         }
     };
