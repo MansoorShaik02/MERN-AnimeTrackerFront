@@ -5,6 +5,7 @@ nav {
   width: 100%;
   background-color: #333; /* Change this to match your design */
   z-index: 1000; /* Ensures the navbar stays on top of other content */
+  margin-bottom: 10px;
 }
 
 nav ul {
