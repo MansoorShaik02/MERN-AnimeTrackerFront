@@ -1,46 +1,37 @@
 /* Navbar.css */
-
 nav {
-  background-color: #1e1e1e; /* Dark background color */
-  padding: 10px 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #333; /* Change this to match your design */
+  z-index: 1000; /* Ensures the navbar stays on top of other content */
 }
 
 nav ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex;
-  justify-content: space-around; /* Distribute links evenly */
-  align-items: center;
+  overflow: hidden;
+  background-color: #333;
 }
 
-nav ul li {
-  margin: 0 15px;
+nav li {
+  float: left;
 }
 
-nav ul li a {
-  color: #f10000; /* White text color */
+nav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
   text-decoration: none;
-  font-size: 1.1em;
-  font-weight: bold;
-  transition: color 0.3s ease;
 }
 
-nav ul li a:hover {
-  color: #f39c12; /* Highlight color on hover */
+nav li a:hover {
+  background-color: #111;
 }
 
-nav ul li a.active {
-  color: #f39c12; /* Highlight current page link */
-}
-
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-  }
-
-  nav ul li {
-    margin: 10px 0;
-  }
+/* Adjust the top margin of the main content to avoid overlapping with the navbar */
+.App {
+  margin-top: 60px; /* Adjust this value based on the height of your navbar */
 }
